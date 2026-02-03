@@ -1,20 +1,19 @@
 class Solution {
     public boolean checkPerfectNumber(int num) {
-      boolean per=true;
-      int sum=0;
-      for(int i=1;i<(num);i++){
+      if(num<=1) return false;
+      int sum=1;
+      int let=(int)(Math.sqrt(num));
+      for(int i=2;i<=let;i++){
         if(num%i==0){
             sum=sum+i;
-            
+            int other=num/i;
+            if(other  != i ){
+                sum = sum + other;}
         }
         
+        
+        
       }
-      if(sum!=num){
-        per=false;
-      }
-      else{
-        per=true;
-      }
-      return per;
+      return sum==num;
     }
 }
