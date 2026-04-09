@@ -12,6 +12,7 @@ class Solution {
             long  time=0;
             for(int j=0;j<n;j++){
                 time +=(piles[j]+mid-1 )/mid;
+                if(time>h) break;
 
             }
             if(time<=h){
