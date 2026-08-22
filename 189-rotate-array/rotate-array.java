@@ -8,11 +8,11 @@ class Solution {
         reverse(nums,0,k-1);
         reverse(nums,k,n-1);
     }
-    public static void reverse(int []nums,int st,int ei){
+    public static void reverse(int []arr,int st,int ei){
         while(st<ei){
-            int temp=nums[st];
-            nums[st]=nums[ei];
-            nums[ei]=temp;
+            int temp=arr[st];
+            arr[st]=arr[ei];
+            arr[ei]=temp;
 
             st++;ei--;
         }
